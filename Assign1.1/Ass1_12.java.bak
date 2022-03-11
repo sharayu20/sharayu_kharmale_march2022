@@ -1,0 +1,25 @@
+import java.io.*;
+class Ass1_12 {
+    static int Sum(int a, int b)
+    {
+        while (b != 0) {
+            int carry = a & b;
+            a = a ^ b;
+            b = carry << 1;
+        }
+        return a;
+    }
+ 
+    // Method 2
+    // Main driver method
+    public static void main(String arg[])
+    {
+ 
+        // Print the sum of custom integer numbers to be
+        // summed up passed as an arguments
+        System.out.println(Sum(2, 3));
+    }
+}
+ 
+ 
+
